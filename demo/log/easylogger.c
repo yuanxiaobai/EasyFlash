@@ -62,7 +62,8 @@ int main(void){
 /**
  * Elog demo
  */
-static void test_elog(void) {
+static void test_elog(void) 
+{
     /* output all saved log from flash */
     elog_flash_output_all();
     /* test log output for all level */

@@ -62,7 +62,8 @@
  *
  * @return result
  */
-EfErrCode easyflash_init(void) {
+EfErrCode easyflash_init(void) 
+{
     extern EfErrCode ef_port_init(ef_env const **default_env, size_t *default_env_size);
     extern EfErrCode ef_env_init(ef_env const *default_env, size_t default_env_size);
     extern EfErrCode ef_iap_init(void);
@@ -75,7 +76,8 @@ EfErrCode easyflash_init(void) {
     result = ef_port_init(&default_env_set, &default_env_set_size);
 
 #ifdef EF_USING_ENV
-    if (result == EF_NO_ERR) {
+    if (result == EF_NO_ERR) 
+    {
         result = ef_env_init(default_env_set, default_env_set_size);
     }
 #endif

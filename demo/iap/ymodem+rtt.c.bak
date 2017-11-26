@@ -66,8 +66,7 @@ static enum rym_code ymodem_on_begin(struct rym_ctx *ctx, rt_uint8_t *buf, rt_si
     update_file_cur_size = 0;
 
     /* erase backup section */
-    if (ef_erase_bak_app(update_file_total_size)) 
-    {
+    if (ef_erase_bak_app(update_file_total_size)) {
         /* if erase fail then end session */
         return RYM_CODE_CAN;
     }
